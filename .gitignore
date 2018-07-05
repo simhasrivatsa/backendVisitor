@@ -6,7 +6,9 @@ data/
 .idea/
 api/target/
 CartisanBackend.iml
-commons/target/
+Commons/target/
 data-model/target/
-
+api/api.iml
+Commons/Commons.iml
+data-model/data-model.iml
 
