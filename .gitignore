@@ -1,0 +1,12 @@
+/target/
+.settings/
+.project
+.classpath
+data/
+.idea/
+api/target/
+CartisanBackend.iml
+commons/target/
+data-model/target/
+
+
