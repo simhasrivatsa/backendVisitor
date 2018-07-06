@@ -1,5 +1,7 @@
 package com.cartisan.entity;
 
+import com.cartisan.util.Util;
+
 import java.util.List;
 
 public class VehicleRepairData {
@@ -7,6 +9,8 @@ public class VehicleRepairData {
     private String phoneNo;
     private String emailId;
     private String description;
+    private String vehicleModel;
+
 
     public String getName() {
         return name;
@@ -54,6 +58,19 @@ public class VehicleRepairData {
 
     public void setVehiclePictures(List<String> vehiclePictures) {
         this.vehiclePictures = vehiclePictures;
+    }
+
+    public String getVehicleModel() {
+        return vehicleModel;
+    }
+
+    public void setVehicleModel(String vehicleModel) {
+        this.vehicleModel = vehicleModel;
+    }
+
+    public String getVehiclePicturesStr()
+    {
+        return Util.convertObjectToString(vehiclePictures);
     }
 
     private String enquiryId;

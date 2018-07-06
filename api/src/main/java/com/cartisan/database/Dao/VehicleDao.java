@@ -9,6 +9,6 @@ import org.skife.jdbi.v2.sqlobject.stringtemplate.UseStringTemplate3StatementLoc
 @UseStringTemplate3StatementLocator()
 public interface VehicleDao extends Transactional<VehicleDao>{
 
-    @SqlUpdate("Insert into repairs (`name`,`phone_no`,`email_id`,`description`,`enquiry_id`,`vehicle_pictures`) Values (:name,:phoneNo,:emailId,:description,:enquiryId,:vehiclePictures)")
+    @SqlUpdate("Insert into repairs (`name`,`phone_no`,`email_id`,`description`,`enquiry_id`,`vehicle_pictures`,`vehicle_model`) Values (:name,:phoneNo,:emailId,:description,:enquiryId,:vehiclePicturesStr, :vehicleModel)")
     void insertVehicleRepairData(@BindBean VehicleRepairData vehicleRepairData);
 }

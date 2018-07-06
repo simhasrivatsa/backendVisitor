@@ -5,6 +5,8 @@ import com.cartisan.util.Util;
 import com.cloudinary.*;
 import com.cloudinary.utils.ObjectUtils;
 import org.springframework.stereotype.Service;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
@@ -20,7 +22,9 @@ public class CloudinaryImageRepository {
                 "api_key", "723453832247966",
                 "api_secret", "99AqS5p8PcYyZ_sRnR0lIcyCBeg");
 
-        Map uploadResult= cloudinary.uploader().upload(Util.convertMultipartToFile(imageStoreRequest.getImageFile()), config);
+        File uploadFile = Util.convertMultipartToFile(imageStoreRequest.getImageFile());
+        Map uploadResult= cloudinary.uploader().upload(uploadFile, config);
+        uploadFile.delete();
 
         return Util.convertObjectToString(uploadResult.get("secure_url"));
 

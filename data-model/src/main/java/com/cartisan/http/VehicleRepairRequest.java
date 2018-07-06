@@ -15,6 +15,17 @@ public class VehicleRepairRequest extends BaseEntity{
     private String description;
     private List<String> vehiclePictures;
 
+    public String getVehicleModel() {
+        return vehicleModel;
+    }
+
+    public void setVehicleModel(String vehicleModel) {
+        this.vehicleModel = vehicleModel;
+    }
+
+    private String vehicleModel;
+
+
     public String getName() {
         return name;
     }
@@ -54,4 +65,6 @@ public class VehicleRepairRequest extends BaseEntity{
     public void setVehiclePictures(List<String> vehiclePictures) {
         this.vehiclePictures = vehiclePictures;
     }
+
+
 }

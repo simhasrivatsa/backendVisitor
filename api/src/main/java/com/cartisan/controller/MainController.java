@@ -25,13 +25,14 @@ public class MainController {
     @Autowired
     private ImageManagementService imageManagementService;
 
-
+    @CrossOrigin
     @RequestMapping(value = "vehicle/repair", method = RequestMethod.POST)
     public ApiSuccessResponse vehicleRepairRequestHandler(@RequestBody VehicleRepairRequest vehicleRepairRequest) {
 
         return vehicleService.vehicleRepairRequest(vehicleRepairRequest);
     }
 
+    @CrossOrigin
     @RequestMapping(value = "image", method = RequestMethod.POST)
     public UserAlbumEntityResponse uploadImageForActivity(@RequestParam("image") MultipartFile imageFile) throws IOException, URISyntaxException {
         return imageManagementService.uploadImage(imageFile);

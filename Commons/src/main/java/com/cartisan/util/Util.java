@@ -56,7 +56,7 @@ public class Util {
         Timestamp now = new Timestamp(System.currentTimeMillis());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyMMddHHmmss");
         String formattedNow = simpleDateFormat.format(now);
-        String enquiryId = "EID" + formattedNow + (new StringBuilder(name)).reverse();
+        String enquiryId = "EID" + formattedNow + (new StringBuilder(name.replaceAll("\\s+","").toUpperCase())).reverse();
         return enquiryId;
     }
 
@@ -65,7 +65,7 @@ public class Util {
         Timestamp now = new Timestamp(System.currentTimeMillis());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyMMddHHmmss");
         String formattedNow = simpleDateFormat.format(now);
-        String imageId = "IID" + formattedNow + (new StringBuilder(fileName)).reverse();
+        String imageId = "IID" + formattedNow + (new StringBuilder(fileName.replaceAll("\\s+","").toUpperCase())).reverse();
         return imageId;
 
     }

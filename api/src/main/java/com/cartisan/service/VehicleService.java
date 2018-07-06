@@ -24,6 +24,7 @@ public class VehicleService {
         vehicleRepairData.setEmailId(vehicleRepairRequest.getEmailId());
         vehicleRepairData.setVehiclePictures(vehicleRepairRequest.getVehiclePictures());
         vehicleRepairData.setPhoneNo(vehicleRepairRequest.getPhoneNo());
+        vehicleRepairData.setVehicleModel(vehicleRepairRequest.getVehicleModel());
         dataManager.addVehicle(vehicleRepairData);
         return new ApiSuccessResponse("ok");
 
