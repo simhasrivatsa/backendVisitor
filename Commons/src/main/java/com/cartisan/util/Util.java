@@ -39,9 +39,6 @@ public class Util {
     }
 
 
-    public static boolean isCollectionNullOrEmpty(Collection<?> collection) {
-        return collection == null || collection.isEmpty();
-    }
 
     public static String getFileExtension(String name) {
         if (isNullOrEmpty(name))
@@ -70,16 +67,6 @@ public class Util {
 
     }
 
-    public static <T> T convertStringToObject(String objectStr, TypeReference<T> t) {
-        if (isNullOrEmpty(objectStr))
-            return null;
-        try {
-            return  (T) objectMapper.readValue(objectStr.getBytes(), t);
-        }catch(Exception ex){
-            throw new RuntimeException(ex);
-        }
-
-    }
 
     public static File convertMultipartToFile(MultipartFile file) throws IOException
     {

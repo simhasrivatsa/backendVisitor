@@ -34,7 +34,7 @@ public class MainController {
 
     @CrossOrigin
     @RequestMapping(value = "image", method = RequestMethod.POST)
-    public UserAlbumEntityResponse uploadImageForActivity(@RequestParam("image") MultipartFile imageFile) throws IOException, URISyntaxException {
+    public UserAlbumEntityResponse uploadVehicleImage(@RequestParam("image") MultipartFile imageFile) throws IOException, URISyntaxException {
         return imageManagementService.uploadImage(imageFile);
     }
 }
