@@ -3,10 +3,10 @@
 	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
 
 	<appender name="ROLLING_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/var/log/cartisan/cartisan-api/access.log</file>
+		<file>/var/log/greyamp/access.log</file>
 		<append>true</append>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern>/var/log/kloh/kloh-api/access.%i.log</fileNamePattern>
+            <fileNamePattern>/var/log/greyamp/access.%i.log</fileNamePattern>
             <minIndex>0</minIndex>
             <maxIndex>3</maxIndex>
         </rollingPolicy>
