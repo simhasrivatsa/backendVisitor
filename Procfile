@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT  -jar api/target/visitor-counter-api.jar
+worker: java -Dserver.port=$PORT  -jar api/target/visitor-counter-api.jar
