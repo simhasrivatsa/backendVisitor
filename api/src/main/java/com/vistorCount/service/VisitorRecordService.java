@@ -1,5 +1,6 @@
 package com.vistorCount.service;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.vistorCount.database.Manager.DataManager;
 import com.vistorCount.entity.VisitorData;
 import com.vistorCount.response.UniqueVisitorCountResponse;
@@ -16,6 +17,7 @@ public class VisitorRecordService {
 
     public UniqueVisitorCountResponse getUniqueVisitorCount(String ipAddress)
     {
+           System.out.println(ipAddress);
            Integer totalVisitorCount = dataManager.getTotalVisitorCount();
            Integer currentVisitorRank = dataManager.getCurrentVisitorRank(ipAddress);
            UniqueVisitorCountResponse uniqueVisitorCountResponse = new UniqueVisitorCountResponse();
