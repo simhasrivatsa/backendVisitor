@@ -53,7 +53,7 @@ public class DependencyConfiguration {
             container.setContextPath("");
 //            System.out.println(System.getenv("PORT") );
             if (System.getenv("PORT") != null) {
-                System.out.println('Setting port with environment variable');
+                System.out.println("Setting port with environment variable");
                 System.out.println(Integer.valueOf(System.getenv("PORT")));
                 container.setPort(Integer.valueOf(System.getenv("PORT")));
 
