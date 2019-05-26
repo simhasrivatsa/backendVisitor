@@ -1,1 +1,1 @@
-web: java -jar target/api-1.0-SNAPSHOT.jar
+web: java -jar api/target/visitor-counter-api.jar
