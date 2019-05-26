@@ -8,9 +8,9 @@
 
     <appender name="ROLLING_FILE_INFO"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/var/log/greyamp/visitors-api.log</file>
+        <file>logs/visitors-api.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/var/log/greyamp/visitors-api.%d{yyyy-MM-dd}</fileNamePattern>
+            <fileNamePattern>logs/visitors-api.%d{yyyy-MM-dd}</fileNamePattern>
             <maxHistory>5</maxHistory>
         </rollingPolicy>
 
