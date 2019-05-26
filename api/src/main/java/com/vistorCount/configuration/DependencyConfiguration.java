@@ -56,6 +56,9 @@ public class DependencyConfiguration {
                 container.setPort(Integer.valueOf(System.getenv("PORT")));
 
             }
+            else{
+                container.setPort(Integer.valueOf(8080));
+            }
         });
     }
 
