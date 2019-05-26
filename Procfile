@@ -1,1 +1,1 @@
-web: java -Djetty.port=$PORT  -jar api/target/visitor-counter-api.jar
+web: java -Dserver.port=$PORT  -jar api/target/visitor-counter-api.jar
