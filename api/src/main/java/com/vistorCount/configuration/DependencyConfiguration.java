@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.vistorCount.database.Dao.VisitorDao;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
 import org.skife.jdbi.v2.DBI;
+import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.jetty.JettyServerCustomizer;
@@ -43,6 +44,19 @@ public class DependencyConfiguration {
     @Bean
     public VisitorDao visitorDao(DBI dbi) {
         return dbi.onDemand(VisitorDao.class);
+    }
+
+
+    @Bean
+    public EmbeddedServletContainerCustomizer containerCustomizer() {
+        return (container -> {
+            container.setContextPath("");
+            System.out.println(System.getenv("PORT") );
+            if (System.getenv("PORT") != null) {
+                container.setPort(Integer.valueOf(System.getenv("PORT")));
+
+            }
+        });
     }
 
     @Bean
