@@ -1,7 +1,6 @@
 package com.vistorCount.configuration;
 
 import ch.qos.logback.access.jetty.RequestLogImpl;
-import com.vistorCount.constants.CommonConstants;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.vistorCount.database.Dao.VisitorDao;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
@@ -21,7 +20,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @Order(1)
-@Profile(CommonConstants.DEFAULT_PROFILE)
+@Profile("default")
 public class DependencyConfiguration {
     @Bean
     public Jackson2ObjectMapperBuilder objectMapperBuilder() {

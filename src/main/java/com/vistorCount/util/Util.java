@@ -2,6 +2,7 @@ package com.vistorCount.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 public class Util {
@@ -35,18 +37,6 @@ public class Util {
         }
         return response;
     }
-
-
-
-    public static String generateRecordId(String ipAddress)
-    {
-        Timestamp now = new Timestamp(System.currentTimeMillis());
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyMMddHHmmss");
-        String formattedNow = simpleDateFormat.format(now);
-        String recordId = "RID" + formattedNow + ipAddress;
-        return recordId;
-    }
-
 
 
     public static boolean isNullOrEmpty(String str) {
